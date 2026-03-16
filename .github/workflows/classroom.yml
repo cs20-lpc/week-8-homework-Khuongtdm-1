@@ -28,7 +28,7 @@ jobs:
       with:
         test-name: verify
         setup-command: ''
-        command: "./homework"
+        command: "./homework.cpp"
         input: ''
         expected-output: 4 4
         comparison-method: contains
