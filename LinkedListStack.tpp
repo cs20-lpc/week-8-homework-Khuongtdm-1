@@ -50,7 +50,7 @@ void LinkedListStack<T>::copy(const LinkedListStack<T>& copyObj) {
     Node<T>* destHead = this->top;
     while (sourHead != nullptr)
     {
-        Node* newNode = new Node<T>(sourHead->data);
+        Node<T>* newNode = new Node<T>(sourHead->data);
         destHead->next = newNode;
         sourHead = sourHead->next;
         destHead = destHead->next;
