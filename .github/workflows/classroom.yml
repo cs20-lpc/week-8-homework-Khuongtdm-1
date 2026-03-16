@@ -30,7 +30,7 @@ jobs:
         setup-command: ''
         command: "./homework"
         input: ''
-        expected-output: "4 4" # Enclosed in quotes for safety
+        expected-output: 4 4 # Enclosed in quotes for safety
         comparison-method: contains
         timeout: 10
         max-score: 5
@@ -40,4 +40,4 @@ jobs:
         COMPILE_RESULTS: "${{steps.compile.outputs.result}}"
         VERIFY_RESULTS: "${{steps.verify.outputs.result}}"
       with:
-        runners: compile,verifycompile,verify
+        runners: compile,verify
