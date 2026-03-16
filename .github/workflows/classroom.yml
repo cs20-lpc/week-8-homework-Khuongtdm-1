@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: compile
         setup-command: ''
-        command: g++  --std=c++17 homework.cpp -o homework
+        command: g++ -std=c++17 homework.cpp -o homework # Cleaned up spaces
         timeout: 10
         max-score: 10
     - name: verify
@@ -30,7 +30,7 @@ jobs:
         setup-command: ''
         command: "./homework"
         input: ''
-        expected-output: 4 4
+        expected-output: "4 4" # Enclosed in quotes for safety
         comparison-method: contains
         timeout: 10
         max-score: 5
@@ -40,4 +40,4 @@ jobs:
         COMPILE_RESULTS: "${{steps.compile.outputs.result}}"
         VERIFY_RESULTS: "${{steps.verify.outputs.result}}"
       with:
-        runners: compile,verify
+        runners: compile,verifycompile,verify
