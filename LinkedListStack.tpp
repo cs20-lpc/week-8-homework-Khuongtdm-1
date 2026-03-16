@@ -54,10 +54,10 @@ void LinkedListStack<T>::copy(const LinkedListStack<T>& copyObj) {
         destHead->next = newNode;
         sourHead = sourHead->next;
         destHead = destHead->next;
-        this->length++;
+        
     }
     destHead->next = nullptr;
-
+    this->length = copyObj.length;
     
 }
 
