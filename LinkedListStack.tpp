@@ -108,7 +108,7 @@ void LinkedListStack<T>::rotate(typename Stack<T>::Direction dir) {
         throw string("invalid length");
     }
 
-    if (dir == LEFT)
+    if (dir == Stack<T>::LEFT)
     {
         Node<T>* oldTop = top;
         top = top->next;
@@ -120,7 +120,7 @@ void LinkedListStack<T>::rotate(typename Stack<T>::Direction dir) {
         curr->next = oldTop;
         oldTop->next = nullptr;
     }
-    if (dir == RIGHT)
+    if (dir == Stack<T>::RIGHT)
     {
         Node<T>* curr =top;
         Node<T>* prev =top;
