@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: compile
         setup-command: ''
-        command: g++ -std=c++17 homework.cpp -o homework # Cleaned up spaces
+        command: g++ --std=c++17 homework.cpp -o homework # Cleaned up spaces
         timeout: 10
         max-score: 10
     - name: verify
